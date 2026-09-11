@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmpowerNGO - Transformando Vidas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- CABEÇALHO FIXO: Nunca some da tela -->
+    <header>
+        <h1>EmpowerNGO</h1>
+        <button class="btn-hamburger" aria-label="Abrir menu" aria-expanded="false">
+            <span class="linha"></span>
+            <span class="linha"></span>
+            <span class="linha"></span>
+        </button>
+        <nav class="navegacao">
+            <ul>
+                <!-- TROCAMOS AS BARRAS (/) POR HASH (#) -->
+                <li><a href="#inicio" class="link-spa">Início</a></li>
+                <li class="item-dropdown">
+                    <a href="#projetos" class="link-spa" aria-haspopup="true">Projetos ▼</a>
+                    <ul class="submenu" aria-label="Submenu de projetos">
+                        <li><a href="#projetos" class="link-spa">Educação</a></li>
+                        <li><a href="#projetos" class="link-spa">Inclusão Digital</a></li>
+                    </ul>
+                </li>
+                <li><a href="#cadastro" class="link-spa">Faça Parte</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- PALCO VAZIO: Onde a mágica acontece -->
+    <main id="conteudo-principal">
+        <!-- O JavaScript do spa.js vai injetar o conteúdo das páginas exatamente aqui -->
+    </main>
+
+    <!-- RODAPÉ FIXO: Nunca some da tela -->
+    <footer>
+        <div class="informacoes-contato">
+            <h3>Fale Conosco</h3>
+            <p><strong>E-mail:</strong> contato@empowerngo.org.br</p>
+            <p><strong>Telefone:</strong> (82) 3333-0000</p>
+            <p><strong>Endereço:</strong> Rua da Cidadania, 123 - Maceió, AL</p>
+        </div>
+        
+        <div class="direitos-autorais">
+            <p>&copy; 2026 EmpowerNGO. Todos os direitos reservados. CNPJ: 00.000.000/0001-00</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS: O motor da aplicação -->
+    <script src="js/spa.js"></script>
+    <script src="js/mascaras.js"></script>
+    <!-- Importação do SweetAlert2 (Cole esta linha) -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
