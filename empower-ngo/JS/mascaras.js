@@ -76,7 +76,7 @@ document.addEventListener('submit', function(e) {
     if (e.target.classList.contains('form-cadastro')) {
         e.preventDefault(); 
         
-        // 1. Salva os dados no HD do navegador
+        // Salva os dados no LocalStorage
         const novoCadastro = {
             nome: document.getElementById('nome').value,
             email: document.getElementById('email').value,
@@ -87,12 +87,12 @@ document.addEventListener('submit', function(e) {
         historico.push(novoCadastro);
         localStorage.setItem('historicoCadastros', JSON.stringify(historico));
         
-        // 2. Limpa o formulário na hora
+        // Limpa o formulário na hora
         e.target.reset(); 
         const campos = e.target.querySelectorAll('input, select');
         campos.forEach(campo => removerErro(campo));
 
-        // 3. O Alerta Animado do SweetAlert2 substituindo o alert() nativo
+        // Alerta Animado do SweetAlert2
         Swal.fire({
             title: 'Cadastro Concluído!',
             text: 'Obrigado por se juntar à EmpowerNGO. Verifique o nosso contador atualizado na página inicial.',
@@ -100,7 +100,6 @@ document.addEventListener('submit', function(e) {
             confirmButtonText: 'Continuar',
             confirmButtonColor: '#3498db'
         }).then((result) => {
-            // Só redireciona a página DEPOIS que o usuário fechar o alerta
             if (result.isConfirmed) {
                 window.location.hash = '#inicio';
             }
