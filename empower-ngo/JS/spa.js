@@ -41,20 +41,17 @@ const getRotas = () => ({
             <h2>Conectando Solidariedade e Necessidade</h2>
             <p>A EmpowerNGO atua como ponte entre a sua vontade de ajudar e as comunidades que mais precisam.</p>
             
-            <div style="background: #eef2f5; color: #2c3e50; padding: 15px; border-radius: 8px; margin: 20px 0; font-weight: bold; text-align: center; border: 1px dashed #3498db;">
+            <div style="background: var(--color-bg-card); color: var(--color-text-main); padding: 15px; border-radius: 8px; margin: 20px 0; font-weight: bold; text-align: center; border: 1px dashed var(--color-primary);">
                 🚀 Junte-se aos ${obterTotalCadastros()} voluntários já cadastrados!
             </div>
 
             <a href="#projetos" class="btn link-spa">Conheça Nosso Impacto</a>
         </section>
 
-        <section class="quem-somos grid-container">
+        <section class="quem-somos grid-container" style="margin-top: 40px;">
             <div class="grid-item texto-institucional" style="grid-column: span 12;">
                 <h2>Quem Somos</h2>
                 <p>Somos uma organização dedicada a transformar realidades por meio da educação e assistência básica.</p>
-            </div>
-            <div class="grid-item imagem-institucional" style="grid-column: span 12;">
-                <img src="img/equipe-ong.jpg" alt="Equipe de voluntários atuando" style="width: 100%; border-radius: 8px;">
             </div>
         </section>
     `,
@@ -63,7 +60,6 @@ const getRotas = () => ({
         <section>
             <h2>Nossas Iniciativas Solidárias</h2>
             <p style="margin-bottom: 30px;">A EmpowerNGO atua em diferentes frentes para combater a desigualdade social no Brasil.</p>
-            <img src="img/equipe-ong.jpg" alt="Equipe de voluntários" style="max-width: 100%; border-radius: 8px; margin-bottom: 30px;">
 
             <section class="frente-atuacao">
                 <h2>Frente de Educação</h2>
@@ -86,7 +82,7 @@ const getRotas = () => ({
             <h2>Faça Parte da Nossa Rede</h2>
             <p style="margin-bottom: 25px;">Preencha o formulário para se cadastrar como voluntário ou doador.</p>
 
-            <form action="#" method="POST" class="form-cadastro">
+            <form action="#" method="POST" class="form-cadastro" novalidate>
                 <div class="grupo-input">
                     <label for="nome">Nome Completo (Mín. 3 letras):</label>
                     <input type="text" id="nome" name="nome" minlength="3" required placeholder="Digite seu nome completo">
